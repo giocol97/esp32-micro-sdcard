@@ -358,9 +358,9 @@ struct directoryEntry {
            * FAT12 or FAT16 volume).
            */
   uint16_t firstClusterHigh;
-           /** Time of last write. File creation is considered a write. */
+           /** Time of last write. MyFile creation is considered a write. */
   uint16_t lastWriteTime;
-           /** Date of last write. File creation is considered a write. */
+           /** Date of last write. MyFile creation is considered a write. */
   uint16_t lastWriteDate;
            /** Low word of this entry's first cluster number. */
   uint16_t firstClusterLow;
@@ -380,7 +380,7 @@ uint8_t const DIR_NAME_DELETED = 0XE5;
 uint8_t const DIR_NAME_FREE = 0X00;
 /** file is read-only */
 uint8_t const DIR_ATT_READ_ONLY = 0X01;
-/** File should hidden in directory listings */
+/** MyFile should hidden in directory listings */
 uint8_t const DIR_ATT_HIDDEN = 0X02;
 /** Entry is for a system file */
 uint8_t const DIR_ATT_SYSTEM = 0X04;

@@ -668,6 +668,8 @@ void SdFile::printTwoDigits(uint8_t v) {
 int16_t SdFile::read(void* buf, uint16_t nbyte) {
   uint8_t* dst = reinterpret_cast<uint8_t*>(buf);
 
+  //Serial.printf("isopen %d\n", isOpen());
+  
   // error if not open or write only
   if (!isOpen() || !(flags_ & F_READ)) return -1;
 
